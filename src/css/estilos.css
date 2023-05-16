@@ -33,6 +33,7 @@ body{
     flex-direction: column;
     align-items: center; /*alinha horizontalmente por causa do flex direction column*/
     gap: 10px;
+    text-align: center;
 
 }
 
