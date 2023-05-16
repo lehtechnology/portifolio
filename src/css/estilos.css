@@ -144,3 +144,29 @@ body{
 .redes-sociais li a:hover{
     opacity: 0.8;
 }
+.projetos .imc{
+    background-color: red;
+}
+.projetos .farmacia{
+    background-color: #2636e1;
+}
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+}
+.projetos li a{
+    background-color: red;
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+.projetos li a:hover{
+    opacity: 0.8;
+}
