@@ -1,35 +1,35 @@
 const abas = document.querySelectorAll(".aba");
 
 abas.forEach(aba => {
+  aba.addEventListener("click", function() {
+    if (aba.classList.contains("selecionado")) {
+      return;
+    }
 
-    aba.addEventListener("click", function() {
-        
-        if(aba.classList.contains("selecionado")){
-            return;
-        }
-
-        selecionarAba(aba);
-        mostrarInformacoesDaAba(aba);
-
-    });
+    selecionarAba(aba);
+    mostrarInformacoesDaAba(aba);
+  });
 });
 
 function selecionarAba(aba) {
-
-    const abaSelecionada = document.querySelector(".aba.selecionado");
+  const abasSelecionadas = document.querySelectorAll(".aba.selecionado");
+  abasSelecionadas.forEach(abaSelecionada => {
     abaSelecionada.classList.remove("selecionado");
+  });
 
-    aba.classList.add("selecionado");
+  aba.classList.add("selecionado");
 }
 
 function mostrarInformacoesDaAba(aba) {
-
-    const informacaoSelecionada = document.querySelector(".informacao.selecionado");
+  const informacoesSelecionadas = document.querySelectorAll(".informacao.selecionado");
+  informacoesSelecionadas.forEach(informacaoSelecionada => {
     informacaoSelecionada.classList.remove("selecionado");
+  });
 
-    const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`
+  const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`;
+  const informacaoASerMostrada = document.getElementById(idDoElementoDeInformacoesDaAba);
 
-    const informacaoASerMostrada = document.getElementById(idDoElementoDeInformacoesDaAba)
+  informacaoASerMostrada.classList.add("selecionado");
+}
 
-    informacaoASerMostrada.classList.add("selecionado")
-};
+
